@@ -27,7 +27,7 @@ public class Polygon {
 	private Rectangle bounds;
 	
 	public Polygon () {
-		
+		this.localVertices = new float[0];
 	}
 
 	public Polygon (float[] vertices) {

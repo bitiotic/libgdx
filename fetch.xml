@@ -87,6 +87,10 @@
 			<include name="**/libikvm-natives.a"/>
 		</fileset>
 		
+		<!-- copy to core -->
+		<copy todir="gdx/dist/armeabi"><fileset refid="gdx-armeabi"/></copy>
+		<copy todir="gdx/dist/armeabi-v7a"><fileset refid="gdx-armeabi-v7a"/></copy>
+
 		<!-- copy to demos -->
 		<!-- invaders -->
 		<copy todir="demos/invaders/gdx-invaders-android/libs/armeabi"><fileset refid="gdx-armeabi"/></copy>

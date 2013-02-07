@@ -30,7 +30,6 @@ zipfileset id="jarfiles" -> the jar files to be merged with the project's classe
 	<target name="init" depends="clean">		
 		<mkdir dir="${target}" />
 		<mkdir dir="${target}/java" />
-		<mkdir dir="${target}/../libs" /> <!-- hack (?) in case lib directory doesn't exist (otherwise 'javac' chokes?) -->
 		<!-- need to copy the internal font to target if compiling the gdx core :/ -->
 		<copy failonerror="false" tofile="${target}/java/com/badlogic/gdx/utils/arial-15.png" file="src/com/badlogic/gdx/utils/arial-15.png" />
 		<copy failonerror="false" tofile="${target}/java/com/badlogic/gdx/utils/arial-15.fnt" file="src/com/badlogic/gdx/utils/arial-15.fnt" />

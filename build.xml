@@ -49,6 +49,9 @@
 		the GLES 2.0 bindings manually... -->
 		<copy tofile="${distDir}/armeabi/libandroidgl20.so" file="gdx/dist/armeabi/libandroidgl20.so"/>
 		<copy tofile="${distDir}/armeabi-v7a/libandroidgl20.so" file="gdx/dist/armeabi/libandroidgl20.so"/>
+		<!-- For non-native builds, need to copy libgdx.so (native builder puts it into dist) -->
+		<copy tofile="${distDir}/armeabi/libgdx.so" file="gdx/dist/armeabi/libgdx.so"/>
+		<copy tofile="${distDir}/armeabi-v7a/libgdx.so" file="gdx/dist/armeabi/libgdx.so"/>
 	</target>
 	
 	<!-- gdx openal, for all desktop backends -->

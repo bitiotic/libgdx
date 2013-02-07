@@ -15,12 +15,29 @@ WebGL enabled browser and soon iOS.
 
 ## Compiling the Code
 
-This project has a few [prerequisites][7] but primarily uses the ant build tool. If you wish to compile the code then just check it out and:
+This project has a few [prerequisites][7] but primarily uses the ant
+build tool. If you wish to compile the Java code then just:
 
+    <checkout code or fetch updated code>
     cd /path/to/libgdx
+    ant -f fetch.xml
     ant
 
-And it should compile.
+And it should compile.  This will
+generate a .zip archive of the build and an unpacked "dist" directory.
+
+The "ant -f fetch.xml" fetches the latest native library bits from the
+libGDX nightly builds.  This should be done in tandem with fetching
+new sources or when updating an existing repository to the latest
+bits.
+
+Compiling the native libraries locally is more work.  See the
+documentation elsewhere.
+
+You do not need to compile either the native or Java portions of the
+library.  You can use libGDX directly from the released or nightly
+builds provided.
+
 
 ## Examples
 

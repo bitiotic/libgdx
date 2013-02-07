@@ -15,28 +15,39 @@ WebGL enabled browser and soon iOS.
 
 ## Compiling the Code
 
-This project has a few [prerequisites][7] but primarily uses the ant
-build tool. If you wish to compile the Java code then just:
+There are several ways to build libGDX: with Eclipse, via ant, and via
+ant with native libraries.  
 
-    <checkout code or fetch updated code>
-    cd /path/to/libgdx
+If you just want to play around with the demos and use Eclipse to
+include the libGDX libraries, just download the tree, fetch the binary
+bits, and import the result into Eclipse.  See the [documentation][8]
+for more details.
+
+    git clone git://github.com/libgdx/libgdx.git
+    cd libgdx
+    ant -f fetch.xml
+
+If you want to build the Java bits of the project, and generate
+something that looks like the a nightly build snapshot then just run
+'ant':
+
+    git clone git://github.com/libgdx/libgdx.git
+    cd libgdx
     ant -f fetch.xml
     ant
 
-And it should compile.  This will
-generate a .zip archive of the build and an unpacked "dist" directory.
+And it should compile.  
+This will generate a .zip archive of the build and an unpacked "dist"
+directory.  
+See the [documentation][8] for more details.
 
-The "ant -f fetch.xml" fetches the latest native library bits from the
-libGDX nightly builds.  This should be done in tandem with fetching
-new sources or when updating an existing repository to the latest
-bits.
+Compiling the native libraries locally requires a bunch more
+prerequisites, but is also driven via ant.  Please contribute some
+documentation to the wiki if you figure this out.
 
-Compiling the native libraries locally is more work.  See the
-documentation elsewhere.
-
-You do not need to compile either the native or Java portions of the
-library.  You can use libGDX directly from the released or nightly
-builds provided.
+Note that you do not need to compile either the native or Java
+portions of the library.  You can use libGDX directly from the
+released or nightly builds provided.
 
 
 ## Examples
@@ -59,3 +70,4 @@ these example projects. Once again, if you get stuck just drop in to the friendl
  [5]: http://www.badlogicgames.com/forum
  [6]: http://www.twitter.com/badlogicgames
  [7]: http://code.google.com/p/libgdx/wiki/Prerequisits
+ [8]: http://libgdx.badlogicgames.com/documentation.html
